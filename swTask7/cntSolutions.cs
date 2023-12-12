@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace swTask7
 {
-    internal class cntSolutions
+    public  class cntSolutions
     {
-        int CntSolutions(double a, double b, double c)
+        public static int CntSolutions(double a, double b, double c)
         {
             double d = b * b - 4 * a * c;
             if (d < 0) return 0;
