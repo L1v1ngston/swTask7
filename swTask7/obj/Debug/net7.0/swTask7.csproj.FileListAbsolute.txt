@@ -1,0 +1,14 @@
+D:\ProgInjTask5\swTask7\swTask7\bin\Debug\net7.0\swTask7.exe
+D:\ProgInjTask5\swTask7\swTask7\bin\Debug\net7.0\swTask7.deps.json
+D:\ProgInjTask5\swTask7\swTask7\bin\Debug\net7.0\swTask7.runtimeconfig.json
+D:\ProgInjTask5\swTask7\swTask7\bin\Debug\net7.0\swTask7.dll
+D:\ProgInjTask5\swTask7\swTask7\bin\Debug\net7.0\swTask7.pdb
+D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\swTask7.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\swTask7.AssemblyInfoInputs.cache
+D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\swTask7.AssemblyInfo.cs
+D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\swTask7.csproj.CoreCompileInputs.cache
+D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\swTask7.dll
+D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\refint\swTask7.dll
+D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\swTask7.pdb
+D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\swTask7.genruntimeconfig.cache
+D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\ref\swTask7.dll
