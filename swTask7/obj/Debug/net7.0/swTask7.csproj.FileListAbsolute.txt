@@ -12,3 +12,6 @@ D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\refint\swTask7.dll
 D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\swTask7.pdb
 D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\swTask7.genruntimeconfig.cache
 D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\ref\swTask7.dll
+D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\swTask7.csproj.AssemblyReference.cache
+D:\ProgInjTask5\swTask7\swTask7\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\ProgInjTask5\swTask7\swTask7\obj\Debug\net7.0\swTask7.csproj.CopyComplete
