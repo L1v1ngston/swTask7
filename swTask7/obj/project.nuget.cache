@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "9aty+baVBONBE+29MKtHa4iyKkaD18oKANdO3LVksLInHhz9CnvNLbcEvH6GPg2HF+vuRbfPEQRbZ55ZE65slg==",
+  "dgSpecHash": "/4ZbUxtDoywuC0LZPAWz7Gtcst4v/Lfaw4afjynAnxiFFyMr1mimRADc6yenxIKrxBg67fxAh6+BpQ4LyInadA==",
   "success": true,
   "projectFilePath": "D:\\ProgInjTask5\\swTask7\\swTask7\\swTask7.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\HUAWEI\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
