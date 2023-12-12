@@ -11,5 +11,19 @@ namespace swTask7_Tests
         {
             Assert.IsTrue(CntSolutions(3.0,3.0,3.0) == 0);
         }
+
+        [Test]
+        public void Test2()
+        {
+            Assert.IsTrue(CntSolutions(3.0, 33, 3.0) == 2);
+        }
+
+
+        [Test]
+        public void Test3()
+        {
+            Assert.IsFalse(CntSolutions(3.0, 3.0, 3.0) == 1);
+        }
+
     }
 }
