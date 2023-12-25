@@ -1,43 +1,71 @@
-﻿using System;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-using System.Net.Http.Headers;
-
-class bonus
+﻿using System.Text;
+using System.Text.Json;
+public class cntSolutions
 {
-    static async Task Main()
+    public static int CntSolutions(double a, double b, double c)
     {
-        var apiToken = "y0_AgAAAABdx8V8AAr6sgAAAAD0lRNoGTu4N5UlS82mwTRCNB7t4tHHwLE"; // Замените на ваш токен
-        var queueId = "TEAMCITYBUILDFA";   // ID созданной очереди
-        var ownerId = "aje5onvp7suh6hbr1jhh";   // ID владельца очереди
-        var orgId = "bpfbmihbfa98v3kflolj";       // ID вашей организации в Yandex Tracker
+        double d = b * b - 4 * a * c;
+        if (d < 0) return 0;
+        else if (d == 0) return 1;
+        else return 2
+    }
 
-        var client = new HttpClient();
-        client.DefaultRequestHeaders.Add("Authorization", $"OAuth {apiToken}");
-        client.DefaultRequestHeaders.Add("X-Org-ID", orgId);
+}
 
-        var url = "https://tracker.yandex.ru/createTicket?queue=TEAMCITYBUILDFA&_form=false";
-        var data = new
+public static class BuildTask
+{
+    public static readonly HttpClient httpClient = new HttpClient() { BaseAddress = new Uri("https://jsonplaceholder.typicode.com"), };
+    public static async void Task(HttpClient client)
+    {
+        string host = "https://api.tracker.yandex.net";
+        client.BaseAddress = new Uri(host);
+        string direct = "/v2/issues";
+        string token = "y0_AgAAAABdx8V8AAr6sgAAAAD0lRNoGTu4N5UlS82mwTRCNB7t4tHHwLE";
+        client.DefaultRequestHeaders.Add("Authorizaton", $"OAuth {token}");
+
+        string orgID = "bpfbmihbfa98v3kflolj";
+        client.DefaultRequestHeaders.Add("X-Cloud-Org-ID", orgID );
+
+        string[] arr = { "protsuk.yuriy", "iwhanter" };
+
+        StringContent json = new(JsonSerializer.Serialize(new
         {
-            queue = queueId,
-            summary = "Build Failure in TeamCity",
-            description = "A build has failed in TeamCity. Please investigate.",
-            assignee = ownerId
-        };
-
-        var content = new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json");
-        var response = await client.PostAsync(url, content);
-        
-
-        if (response.IsSuccessStatusCode)
+            queue = "TEAMCITYBUILDFA",
+            summary = "И восстали машины из пепла ядерного огня",
+            description = "машины не восстали",
+            type = "task",
+            priority = "critical",
+            followers = arr,
+            author = "dstrigin11",
+            assignee = "dstrigin11",
+        }),Encoding.UTF8, "application/json");
+        var response = client.PostAsync(host + direct, json).Result; 
+        if (response.IsSuccessStatusCode) 
         {
-            Console.WriteLine("Task created successfully");
+            string responseBody = response.Content.ReadAsStringAsync().Result;
+            Console.WriteLine($"Response: {responseBody}");
         }
         else
         {
-            Console.WriteLine("Failed to create task");
+            Console.WriteLine($"error: {response.StatusCode} - {response.ReasonPhrase}");
         }
+    }
+}
+
+
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+            Console.WriteLine(cntSolutions.CntSolutions(1, 1, 1));
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Задача создана");
+            BuildTask.Task(BuildTask.httpClient);
+        }
+
     }
 }
