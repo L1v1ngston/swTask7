@@ -1,16 +1,6 @@
 ﻿using System.Text;
 using System.Text.Json;
-public class cntSolutions
-{
-    public static int CntSolutions(double a, double b, double c)
-    {
-        double d = b * b - 4 * a * c;
-        if (d < 0) return 0;
-        else if (d == 0) return 1;
-        else return 2
-    }
 
-}
 
 public static class BuildTask
 {
@@ -52,20 +42,3 @@ public static class BuildTask
     }
 }
 
-
-class Program
-{
-    static void Main()
-    {
-        try
-        {
-            Console.WriteLine(cntSolutions.CntSolutions(1, 1, 1));
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine("Задача создана");
-            BuildTask.Task(BuildTask.httpClient);
-        }
-
-    }
-}
